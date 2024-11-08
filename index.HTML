@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" container="width=device-width, initial-scale=1.0">
+    <title>FireBase</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+    <body>
+        <img src=img/aluno.png>
+        <div class="container">
+            <h1> CADASTRE O ALUNO</h1>
+            <form id="add-student-form">
+                <input type="text" name="nome" placeholder="Nome do aluno">
+                <input type="text" name="turma" placeholder="Turma">
+                <input type="text" name="cpf" placeholder="CPF">
+                <input type="text" name="rg" placeholder="RG">
+                <input type="text" name="telefone_aluno" placeholder="Telefone do aluno">
+                <input type="text" name="telefone_responsavel" placeholder="Telefone do responsável">
+                <input type="email" name="email" placeholder="Email">
+                <input type="date" name="data_nasc" placeholder="Data de nascimento">
+                <button>CADASTRAR</button>
+            </form>
+        </div>
+        <H1> LISTA DE ALUNOS</H1>
+        <!-- <div class="delete">
+            <form id="deletar-aluno-lista">
+                <h2>EXCLUIR ALUNO</h2>
+                <input type="text" name="delete" placeholder="CÓDIGO DO ALUNO">
+                <button>EXCLUIR</button>
+            </form>
+        </div> -->
+        <div class="list-container">
+            <ul id="lista-aluno"></ul>
+        </div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCe443tB8-z3F_aWNhmJsDl9fwo7xg9pdI",
+            authDomain: "bd3-nosql-firestore.firebaseapp.com",
+            projectId: "bd3-nosql-firestore",
+            storageBucket: "bd3-nosql-firestore.firebasestorage.app",
+            messagingSenderId: "922176996017",
+            appId: "1:922176996017:web:608baeb09c7fcb1e9fd890",
+            measurementId: "G-TESSJ4L0G6"
+        };
+            firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+            console.log(db);
+    </script>
+    <script src="app.js"></script>
+</html>
+
